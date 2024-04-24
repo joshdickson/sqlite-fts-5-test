@@ -27,7 +27,7 @@ function openDatabase() {
   const readOnly = false;
     db.transactionAsync(async (tx) => {
     try {
-    const result = await tx.executeSqlAsync("CREATE VIRTUAL TABLE foods_fts USING fts5(name)", []);
+    const result = await tx.executeSqlAsync("CREATE VIRTUAL TABLE test_fts5 USING fts5(name)", []);
     console.log("Result:", result);
   } catch (e) {
     console.error(e);
